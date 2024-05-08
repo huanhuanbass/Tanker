@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_page_config(layout="wide")
 import plotly.express as px
 from plotly.subplots import make_subplots
 import pandas as pd
@@ -190,6 +191,8 @@ st.text('Tanker Data Done!')
 
 st.title('Tanker')
 st.text('Dry Bulk Freight (Tanker) Interactive Dashboard')
+
+
 
 st.markdown('## **Dirty Tanker Spot Price**')
 spot=st.session_state['tankerspot']
