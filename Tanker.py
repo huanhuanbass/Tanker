@@ -112,7 +112,7 @@ def load_tanker_asset_price_data():
     all=pd.concat([hist,assetprice])
     all=all[~all.index.duplicated(keep='last')]
     all.fillna(method='ffill',inplace=True)
-    all.to_csv('Data/tankerhist.csv',index_label='Date')
+    all.to_csv('tankerhist.csv',index_label='Date')
 
     print('done')
 
@@ -159,7 +159,7 @@ def load_tanker_spot_data():
     spotnew=pd.merge(spotnew,spotafra,left_index=True,right_index=True,how='outer')
     spotnew.index=pd.to_datetime(spotnew.index)
 
-    spot=pd.read_csv('Data/tankerspot.csv')
+    spot=pd.read_csv('tankerspot.csv')
     spotold=spot.set_index('Date')
     spotold.index=pd.to_datetime(spotold.index)
 
