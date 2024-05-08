@@ -104,7 +104,7 @@ def load_tanker_asset_price_data():
     assetprice.index=pd.to_datetime(assetprice.index)
     assetprice.index=assetprice.index.date
 
-    hist=pd.read_csv('Data/tankerhist.csv')
+    hist=pd.read_csv('tankerhist.csv')
     hist.set_index('Date',inplace=True)
     hist.index=pd.to_datetime(hist.index)
     hist.index=hist.index.date
@@ -174,7 +174,7 @@ def load_tanker_spot_data():
 
     st.text('Spot Data After Update: '+str(spot.index.date[-1]))
 
-    spot.to_csv('Data/tankerspot.csv',index_label='Date')
+    spot.to_csv('tankerspot.csv',index_label='Date')
 
     return spot
 
