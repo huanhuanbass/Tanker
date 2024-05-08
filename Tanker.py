@@ -7,6 +7,7 @@ from datetime import timedelta
 import numpy as np
 from ta.volatility import BollingerBands
 from ta.trend import SMAIndicator
+from pandas.tseries.offsets import BDay
 
 import plotly.graph_objects as go
 
