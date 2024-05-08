@@ -195,7 +195,7 @@ st.text('Dry Bulk Freight (Tanker) Interactive Dashboard')
 pwd=st.text_input('Password:', value='', type='password')
 
 if pwd!='Cofco':
-    st.write('Please Enter Correct Password and Hit the Enter Key')
+    st.write('Please the Enter Correct Password and Hit the Enter Key')
     import sys
     sys.exit()
 
