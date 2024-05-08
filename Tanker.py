@@ -192,6 +192,12 @@ st.text('Tanker Data Done!')
 st.title('Tanker')
 st.text('Dry Bulk Freight (Tanker) Interactive Dashboard')
 
+pwd=st.text_input('Password:', value='', type='password')
+
+if pwd!='Cofco':
+    st.write('Please Enter Correct Password and Hit the Enter Key')
+    import sys
+    sys.exit()
 
 
 st.markdown('## **Dirty Tanker Spot Price**')
